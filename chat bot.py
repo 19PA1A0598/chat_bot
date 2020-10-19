@@ -19,60 +19,39 @@ def welcome(name):
     responses = ["Have a warm welcome!","It's nice to meet you","It's good to meet you"]
     print(random.choice(responses),name)
 
-def timing():
-    j = 0
-    while (j != 4):
-        try:
-            j = int (input ("Which time do you prefer your appointment to be? \n Choose one of the options [1-4] \n 1. 7:00 am to 12:00 pm  \n 2. 1:00 pm to 5:00 pm \n 3. 6:00 pm to 10:00pm \n 4.End the conversation\n"))
-            if j == 1:
-                print("Your appointment has been recorded after verification you will be contacted.Thank you for using our services.Have a nice day :).")
-                print(" ")
-                print("Do you need my assistance with anything else.If no please end the conversation")
-                break
-            elif j == 2:
-                print ("Your appointment has been recorded after verification you will be contacted.Thank you for using our services.Have a nice day :).")
-                print("")
-                print ("Do you need my assistance with anything else.If no please end the conversation")
-                break
-            elif j == 3:
-                print ("Your appointment has been recorded after verification you will be contacted.Thank you for using our services.Have a nice day :).")
-                print(" ")
-                print ("Do you need my assistance with anything else.If no please end the conversation")
-                break
-            elif j == 4:
-                break
-            else:
-                print ("Only integers 1,2,3,4 are allowed!")
-        except Exception as e:
-            print ("Only integers are allowed")
-
 def doctorAppointment():
-    print("May I know the patient's detail's")
-    N=input("name of the patient:")
-    a=int(input("age of the patient:"))
-    numb=int(input("May I have your contact number:"))
-    m = 0
-    while (m != 5):
-        try:
-            m = int (input ("What kind of illness are facing? \n Choose one of the options [1-5] \n 1. Heart related problem  \n 2. Eye related problem \n 3. Diabetes related problem\n 4.Skin related problem \n 5.End the conversation\n"))
-            if m == 1:
-                timing ()
-                break
-            elif m == 2:
-                timing ()
-                break
-            elif m == 3:
-                timing ()
-                break
-            elif m == 4:
-                timing ()
-                break
-            elif m == 5:
-                break
-            else:
-                print ("Only integers 1,2,3,4,5 are allowed!")
-        except Exception as e:
-            print ("Only integers are allowed")
+    print("May I know the patient's details")
+    N=input("Name of the patient:")
+    rightAge=False
+    while(not(rightAge)):
+    	try:
+    		a=int(input("Age of the patient:"))
+    		if(not(0<=a<=100)):
+    			print("Invalid age")
+    		else:
+    			rightAge=True
+    	except:
+    		print("Invalid information given")
+    complaint=input("What is your health problem?\n")
+    rightNumb=False
+    while(not(rightNumb)):
+    	try:
+    		numb=int(input("Enter your contact number:"))
+    		rightNumb=True
+    	except:
+    		print("Invalid information given")
+    rightTime=False
+    while(not(rightTime)):
+    	try:
+    		time = int(input("Select your time slot for the appointment: [1-3]\n 1. 9:00 am to 12:00 pm \n 2. 1:00 pm to 5:00 pm\n 3. 6:00 pm to 10:00 pm\n"))
+    		if(1<=time<=3):
+    			rightTime=True
+    		else:
+    			print("Only options 1,2,3 are available")
+    	except:
+    		print("Only given options should be selected")
+    print("Your appointment has been recorded after verification you will be contacted.Thank you for using our services.Have a nice day :).")
+    print("Do you need my assistance with anything else.?")
 
 def display_options():
 	n=0
