@@ -1,5 +1,10 @@
-
-
+// this is the code for a chat bot used for hospitals.
+// this chatbot has two services namely doctor appointment booking and medical tests services at home.
+// this chatbot greets the user according to the time of usage.
+// It also welcomes the user with their name. 
+// Then it displays the services it can provide and asks the user to select one of them. 
+// It collects the data required from the user.
+// It thanks the user for using its service. 
 import random
 from datetime import datetime
 def greeting():
