@@ -78,7 +78,7 @@ def display_options():
 				print("Thank you for using our services.Have a pleasent day.")
 				break
 			else:
-				print("Only integers 1,2,3,4 are allowed!")
+				print("Only integers 1,2,3 are allowed!")
 		except Exception as e:
 			print("Only integers are allowed")
 
