@@ -13,7 +13,6 @@ def greeting():
     intro ="Welcome to ******* Hospitals.I am Alex an reception bot I am here to help you with your doctor appointments,medical needs.May I know your name?"
     print (greetings, intro)
     greets = ["Have a warm welcome.", "It's nice to meet you."]
-greeting()
 
 def welcome():
 	responses = ["Have a warm welcome!","It's nice to meet you","It's good to meet you"]
