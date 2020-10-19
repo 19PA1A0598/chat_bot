@@ -61,19 +61,25 @@ def doctorAppointment():
     print("Your appointment has been recorded after verification you will be contacted.Thank you for using our services.Have a nice day :).")
     print("Do you need my assistance with anything else ?")
 
+
 def medicalTest():
-        """ this method collects all the details of the patient like name,address which are needed for conducting medical tests at their home. """
 	try:
 		n=int(input("We provide the following tests [1-4]: \n 1. Blood Test \n 2. Diabetes Test\n 3. Thyroid Test\n 4. Corona test\n Which test do you need?\n"))
 		if(1<=n<=4):
 			pName =input("Enter the name of patient: ")
 			address=input("Please Enter the address to get your test samples: \n")
-			print("You will receive a call from us soon.We will reach you as soon as possible.\nThank you for using our service")
+			rightNumb=False
+			while(not(rightNumb)):
+			 				try:
+			 					numb=int(input("Enter your contact number:"))
+			 					rightNumb=True
+			 				except:
+			 					print("Invalid information given")
+			 					print("You will receive a call from us soon.We will reach you as soon as possible.\nThank you for using our service")
 		else:
 			print("Select one from given tests.Sorry, if we couldn't provide the test you needed")
 	except:
 		print("Please select from given tests.Sorry, if we couldn't provide the test you needed")
-
 def display_options():
         """ This method displays all the options to select one of the services provided by the bot."""
 	n=0
