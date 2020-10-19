@@ -53,6 +53,18 @@ def doctorAppointment():
     print("Your appointment has been recorded after verification you will be contacted.Thank you for using our services.Have a nice day :).")
     print("Do you need my assistance with anything else.?")
 
+def medicalTest():
+	try:
+		n=int(input("We provide the following tests [1-4]: \n 1. Blood Test \n 2. Diabetes Test\n 3. Thyroid Test\n 4. Corona test\n Which test do you need?\n"))
+		if(1<=n<=4):
+			pName =input("Enter the name of patient: ")
+			address=input("Please Enter the address to get your test samples: \n")
+			print("You will receive a call from us soon.We will reach you as soon as possible.\nThank you for using our service")
+		else:
+			print("Select one from given tests.Sorry, if we couldn't provide the test you needed")
+	except:
+		print("Please select from given tests.Sorry, if we couldn't provide the test you needed")
+
 def display_options():
 	n=0
 	while(n!=4):
