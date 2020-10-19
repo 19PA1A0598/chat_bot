@@ -14,3 +14,7 @@ def greeting():
     print (greetings, intro)
     greets = ["Have a warm welcome.", "It's nice to meet you."]
 greeting()
+
+def welcome():
+	responses = ["Have a warm welcome!","It's nice to meet you","It's good to meet you"]
+	print(random.choice(responses),name)
