@@ -75,6 +75,7 @@ def display_options():
 			elif n==2:
 				medicalTest()
 			elif n==3:
+				print("Thank you for using our services.Have a pleasent day.")
 				break
 			else:
 				print("Only integers 1,2,3,4 are allowed!")
