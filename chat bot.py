@@ -51,7 +51,7 @@ def doctorAppointment():
     	except:
     		print("Only given options should be selected")
     print("Your appointment has been recorded after verification you will be contacted.Thank you for using our services.Have a nice day :).")
-    print("Do you need my assistance with anything else.?")
+    print("Do you need my assistance with anything else ?")
 
 def medicalTest():
 	try:
@@ -67,16 +67,14 @@ def medicalTest():
 
 def display_options():
 	n=0
-	while(n!=4):
+	while(n!=3):
 		try:
-			n=int(input("How can I help you? \n Choose one of the options [1-4] \n 1. Looking a doctor appointment ?  \n 2. Booking medicine \n 3. Medical tests\n 4.End the conversation\n"))
+			n=int(input("How can I help you? \n Choose one of the options [1-3] \n 1. Looking a doctor appointment ?  \n 2. Medical tests\n 3.End the conversation\n"))
 			if n== 1:
 				doctorAppointment()
 			elif n==2:
-				bookMedicine()
-			elif n==3:
 				medicalTest()
-			elif n==4:
+			elif n==3:
 				break
 			else:
 				print("Only integers 1,2,3,4 are allowed!")
