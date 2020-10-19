@@ -75,7 +75,7 @@ def medicalTest():
 			 					rightNumb=True
 			 				except:
 			 					print("Invalid information given")
-			 				print("You will receive a call from us soon.We will reach you as soon as possible.\nThank you for using our service")
+			print("You will receive a call from us soon.We will reach you as soon as possible.\nThank you for using our service")
 		else:
 			print("Select one from given tests.Sorry, if we couldn't provide the test you needed")
 	except:
