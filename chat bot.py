@@ -1,14 +1,14 @@
 """ this is the code for a chat bot used for hospitals.
  this chatbot has two services namely doctor appointment booking and medical tests services at home.
  this chatbot greets the user according to the time of usage.
- It also welcomes the user with their name. 
- Then it displays the services it can provide and asks the user to select one of them. 
+ It also welcomes the user with their name.
+ Then it displays the services it can provide and asks the user to select one of them.
  It collects the data required from the user.
  It thanks the user for using its service. """
 import random
 from datetime import datetime
 def greeting():
-    """This method greets the user according to the time.""" 
+    """This method greets the user according to the time."""
     time = datetime.now()
     greetings = "Good Morning,"
     if 12 < time.hour < 17:
@@ -81,7 +81,6 @@ def medicalTest():
 	except:
 		print("Please select from given tests.Sorry, if we couldn't provide the test you needed")
 def display_options():
-        """ This method displays all the options to select one of the services provided by the bot."""
 	n=0
 	while(n!=3):
 		try:
