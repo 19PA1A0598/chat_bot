@@ -14,14 +14,14 @@ def greeting():
     print (greetings, intro)
     greets = ["Have a warm welcome.", "It's nice to meet you."]
 
-def welcome():
+def welcome(name):
 	responses = ["Have a warm welcome!","It's nice to meet you","It's good to meet you"]
 	print(random.choice(responses),name)
-def display_options(name):
+def display_options():
 	n=0
 	while(n!=4):
 		try:
-			n=int(input("Hello "+name+"How can I help you? \n Choose one of the options [1-3] \n 1. Looking a doctor appointment ?  \n 2. Booking medicine \n 3. Medical tests\n 4.End the conversation"))
+			n=int(input("How can I help you? \n Choose one of the options [1-3] \n 1. Looking a doctor appointment ?  \n 2. Booking medicine \n 3. Medical tests\n 4.End the conversation"))
 			if n== 1:
 				doctorAppointment()
 			elif n==2:
